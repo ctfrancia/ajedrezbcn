@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="home">
+    <DonationInfo msg="Donate"/>
+  </div>
 </template>
 
 <script>

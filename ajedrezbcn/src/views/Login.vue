@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="home">
+    <LogIntoAccount msg="Login"/>
+  </div>
 </template>
 
 <script>

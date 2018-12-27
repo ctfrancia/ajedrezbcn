@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="home">
+    <ClubRegistration msg="Club Registration"/>
+  </div>
 </template>
 
 <script>

@@ -6,7 +6,7 @@
 <script>
 
 export default {
-  name: 'DonationInfo',
+  name: 'TournamentView',
   props: {
     msg: String,
   },
