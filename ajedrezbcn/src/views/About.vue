@@ -1,5 +1,3 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <!-- there is nothing here when being close to done remove this page -->
 </template>
