@@ -1,14 +1,45 @@
 <template>
-  <div class="about">
-    <h1>{{msg}}</h1>
+  <div class="container">
+    <div class='title'>
+      <h1>{{msg}}</h1>
+    </div>
+    <div class='comps'>
+      <router-link to="/createtournament">
+        <CreateTournamentButton/>
+      </router-link>
+      
+      <TournamentLists />
+    </div>
+    <!-- <router-view /> -->
+    <!-- -->
   </div>
 </template>
 <script>
+import CreateTournamentButton from './CreateTournamentButton.vue';
+import TournamentLists from './TournamentLists.vue';
 
 export default {
   name: 'TournamentView',
   props: {
     msg: String,
   },
+  components: {
+    CreateTournamentButton,
+    TournamentLists,
+  }
 }
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+}
+.comps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  
+}
+</style>

@@ -2,15 +2,15 @@
   <div id="app">
     <div id="nav">
       <div class="donate">
-      <router-link to="/donar">Donar</router-link>
+      <router-link to="/donate">Donar</router-link>
       </div>
 
       <div class="rest">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/torneos">Torneos</router-link> |
-      <router-link to="/clubregistrar">Registra Su Club</router-link> |
-      <router-link to="/usarioregistracion">Crea Una Cuenta</router-link> |
+      <router-link to="/tournaments">Torneos</router-link> |
+      <router-link to="/registerclub">Registra Su Club</router-link> |
+      <router-link to="/registeruser">Crea Una Cuenta</router-link> |
       <router-link to="/login">Iniciar Sesión</router-link>
       </div>
     </div>

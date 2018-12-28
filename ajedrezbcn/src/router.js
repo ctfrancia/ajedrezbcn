@@ -7,7 +7,8 @@ import Login from './views/Login.vue';
 import Donate from './views/Donate.vue';
 import RegisterClub from './views/RegisterClub.vue';
 import RegisterUser from './views/RegisterUser.vue';
-
+// components
+import CreateTournamentForm from './components/CreateTournamentForm.vue';
 
 Vue.use(Router);
 
@@ -27,7 +28,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/torneos',
+      path: '/tournaments',
       name: 'tournaments',
       component: Tournaments,
     },
@@ -37,19 +38,24 @@ export default new Router({
       component: Login,
     },
     {
-      path: '/donar',
+      path: '/donate',
       name: 'donate',
       component: Donate,
     },
     {
-      path: '/clubregistrar',
+      path: '/registerclub',
       name: 'clubRegistration',
       component: RegisterClub,
     },
     {
-      path: '/usarioregistracion',
+      path: '/registeruser',
       name: 'userRegistration',
       component: RegisterUser,
+    },
+    {
+      path: '/createtournament',
+      name: 'createTournament',
+      component: CreateTournamentForm,
     },
   ],
 });
