@@ -31,15 +31,15 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  text-align: center;
-}
-.comps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container {
-  
-}
+  h1 {
+    text-align: center;
+  }
+  .comps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    
+  }
 </style>

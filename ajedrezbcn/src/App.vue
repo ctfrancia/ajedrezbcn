@@ -4,10 +4,10 @@
       <div class="donate">
       <router-link to="/donate">Donar</router-link>
       </div>
-
+      <!--FIXME: TAKE CARE OF ABOUT It'S THERE FOR HELP WITH ROUTING THAT'S IT  -->
       <div class="rest">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
+      <!-- <router-link to="/about">About</router-link> | -->
       <router-link to="/tournaments">Torneos</router-link> |
       <router-link to="/registerclub">Registra Su Club</router-link> |
       <router-link to="/registeruser">Crea Una Cuenta</router-link> |

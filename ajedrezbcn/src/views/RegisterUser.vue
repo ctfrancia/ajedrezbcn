@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <RegisterUser msg="User Register"/>
+    <UserRegistration msg="¡User Register!"/>
   </div>
 </template>
 
@@ -8,12 +8,12 @@
 //------
 //all JS goes here
 //-----
-import RegisterUser from '@/components/UserRegistration.vue';
+import UserRegistration from '@/components/UserRegistration.vue';
 
 export default {
   name: 'registerUser',
   components:{
-    RegisterUser,
+    UserRegistration,
   },
 }
 </script>

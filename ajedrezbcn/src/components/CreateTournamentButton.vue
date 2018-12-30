@@ -17,10 +17,15 @@ export default {
 </script>
 
 <style scoped>
-
-button {
-  border: none;
-  cursor: pointer;
-  background: #FFFCF7;
-}
+  button {
+    margin: 5px 10vw;
+    height: 2em;
+    background: none;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    background: none;
+    border: 1px solid #fffcf7;
+    border-radius: 5px;
+  }
 </style>
