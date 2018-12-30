@@ -19,20 +19,29 @@
             </li>
           </ul>
       </div>
+  <div>
+    Here I want to place the very next tournament that is happening in Barcelona. Create a special "card" where they can see it.
+  </div>
   </div>
 </template>
 
 <style scoped>
-h1 {
-  text-align: center;
-}
+  h1 {
+    text-align: center;
+  }
 
-#container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  /* margin-bottom:px; */
-  padding: 10px;
-}
+  #container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    align-items: center;
+  }
+
+  #mainText{
+    height: 50vh;
+    width: 50vw;
+
+  }
 </style>
 

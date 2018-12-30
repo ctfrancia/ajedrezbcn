@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Tournaments msg="Tournaments"/>
+    <TournamentsMainPage msg="Tournaments"/>
   </div>
 </template>
 
@@ -8,15 +8,13 @@
 //------
 //all JS goes between script tags
 //-----
-import Tournaments from '@/components/TournamentView.vue';
-import CreateTournamentForm from '@/components/CreateTournamentForm.vue';
+import TournamentsMainPage from '@/components/TournamentView.vue';
 
 //TODO: create a child for creating a new tournament
 export default {
   name: 'tournaments',
   components:{
-    Tournaments,
-    CreateTournamentForm,
+    TournamentsMainPage,
   },
 }
 </script>

@@ -18,6 +18,7 @@
 import CreateTournamentButton from './CreateTournamentButton.vue';
 import TournamentLists from './TournamentLists.vue';
 
+//  here is where the call will be made to the database to get the list of all tournaments within barecelona
 export default {
   name: 'TournamentView',
   props: {
