@@ -19,7 +19,7 @@
             </li>
           </ul>
       </div>
-  <div>
+  <div class=""> <!-- insert a new component here -->
     Here I want to place the very next tournament that is happening in Barcelona. Create a special "card" where they can see it.
   </div>
   </div>
