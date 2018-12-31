@@ -20,6 +20,12 @@
           <p>Organizer's Email Address:</p><input class="i-email" type="text">
         </div>
       </div>
+      <div class="upload">
+        <p>upload file</p>
+        <input type="file"
+          id="avatar" name="avatar"
+          accept="image/png, image/jpeg">
+      </div>
       <br>
       <input class="hvr-fade" id="submit" type="submit" value="Submit">
     </form>
