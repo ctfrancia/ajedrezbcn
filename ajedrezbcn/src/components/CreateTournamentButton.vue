@@ -38,7 +38,7 @@ export default {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
-  background: #738290;
+  background: #7a6b3a;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -52,7 +52,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #e1e1e1;
+  background: #ebe2dd;
   border-radius: 100%;
   -webkit-transform: scale(2);
   transform: scale(2);

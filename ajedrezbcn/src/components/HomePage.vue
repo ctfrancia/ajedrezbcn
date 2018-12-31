@@ -29,6 +29,7 @@
 <style scoped>
   h1 {
     text-align: center;
+    color: #da8577;
   }
 
   #container {

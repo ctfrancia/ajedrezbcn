@@ -51,9 +51,9 @@
       placeholder= "Please enter any additional information about your club here">
       </textarea>
       <div id="website">
-        <p class="p-c-w">Club's Website: </p><input class="c-box rest-of-space" type="text" name="" id="">
+        <p class="p-c-w">Club's Website: </p><input class="u-input c-box rest-of-space" type="text" name="" id="">
       </div>
-      <input class="b-submit" type="submit" value="Submit">
+      <input class="b-submit hvr-pop" type="submit" value="Submit">
     </form>
     
   </div>
@@ -97,6 +97,7 @@ export default {
     flex-wrap: wrap;
     border: none;
     background: none;
+    font-size: .9em;
   }
   input[type=text],
   input[type=tel],
@@ -105,22 +106,22 @@ export default {
   border: 0;
   /* width: calc(100% - 2px); */
   /* margin-left:1px; */
-  box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ebebeb;
+  box-shadow: -8px 10px 0px -7px #bb9f7a, 8px 10px 0px -7px #bb9f7a;
   -webkit-transition: box-shadow 0.3s;
   transition: box-shadow 0.3s;
   }
 
   input[type=text]:focus{
   outline: none;
-  box-shadow: -8px 10px 0px -7px #4EA6EA, 8px 10px 0px -7px #4EA6EA;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
   }
   input[type=tel]:focus{
   outline: none;
-  box-shadow: -8px 10px 0px -7px #4EA6EA, 8px 10px 0px -7px #4EA6EA;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
   }
   input[type=email]:focus{
   outline: none;
-  box-shadow: -8px 10px 0px -7px #4EA6EA, 8px 10px 0px -7px #4EA6EA;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
   }
   
   .c-box{
@@ -153,6 +154,8 @@ export default {
   }
   #extras{
     display:flex;
+    text-align: center;
+    vertical-align: middle;
   }
   #website{
     display: flex;
@@ -160,13 +163,44 @@ export default {
   .b-submit{
     margin: 0 15vw;
     height: 3vh;
-  }
-  .p-c-w{
-    /* flex:1; */
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size:.9em;
+    color: #c56161
   }
   .rest-of-space{
     flex-grow:2;
   }
+  @-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 
 </style>
 
