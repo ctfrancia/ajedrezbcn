@@ -1,9 +1,10 @@
+const dinfo = require('../config');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('newclubdb', 'christian', 'postgres', {
+const sequelize = new Sequelize('chessdb', `${dinfo.duser}`, `${dinfo.dpass}`, {
   host: 'localhost',
   dialect: 'postgres',
 });
-const Club = sequelize.define('newClub', {
+const Club = sequelize.define('club', {
   id: {
     type: Sequelize.BIGINT,
     primaryKey: true,

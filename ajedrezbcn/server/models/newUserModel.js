@@ -1,6 +1,6 @@
+const dinfo = require('../config');
 const Sequelize = require('sequelize');
-
-const sequelize = new Sequelize('newuserdb', 'christian', 'postgres', {
+const sequelize = new Sequelize('chessdb', `${dinfo.duser}`, `${dinfo.dpass}`, {
   host: 'localhost',
   dialect: 'postgres',
 });
@@ -13,7 +13,7 @@ sequelize
     console.error('Unable to connect to the database:', err);
   });
 
-const User = sequelize.define('newUser', {
+const User = sequelize.define('users', {
   id: {
     type: Sequelize.BIGINT,
     primaryKey: true,

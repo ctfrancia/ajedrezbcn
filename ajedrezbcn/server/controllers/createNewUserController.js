@@ -1,7 +1,6 @@
 const writeToNewUserDB = require('../models/newUserModel');
 
 module.exports.createNewUser = async function createNewUser(ctx) {
-
   try {
     await writeToNewUserDB(ctx);
     ctx.response.status = 201;
