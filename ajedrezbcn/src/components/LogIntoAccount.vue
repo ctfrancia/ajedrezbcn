@@ -26,17 +26,14 @@ export default {
     -webkit-box-shadow: 6px 8px 8px -6px rgba(0,0,0,1);
     -moz-box-shadow: 6px 8px 8px -6px rgba(0,0,0,1);
     box-shadow: 6px 8px 8px -6px rgba(0,0,0,1);
-    background: #738290;
-    color: #fffcf7;
   }
+
   input {
     background: none;
-    border: 1px solid #fffcf7;
-    border-radius: 5px;
-    height: 2em;
   }
   #b-submit{
     margin: 5px 10vw;
+    border:none;
     height: 2em;
     background: none;
     cursor: pointer;

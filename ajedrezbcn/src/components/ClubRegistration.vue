@@ -98,32 +98,7 @@ export default {
     border: none;
     background: none;
     font-size: .9em;
-  }
-  input[type=text],
-  input[type=tel],
-  input[type=email] {
-  /* height:17px; */
-  border: 0;
-  /* width: calc(100% - 2px); */
-  /* margin-left:1px; */
-  box-shadow: -8px 10px 0px -7px #bb9f7a, 8px 10px 0px -7px #bb9f7a;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  }
-
-  input[type=text]:focus{
-  outline: none;
-  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
-  }
-  input[type=tel]:focus{
-  outline: none;
-  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
-  }
-  input[type=email]:focus{
-  outline: none;
-  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
-  }
-  
+  } 
   .c-box{
     margin: 10px;
   }

@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <div class="donate">
-      <router-link to="/donate">Donar</router-link>
+      <router-link class="hvr-grow" to="/donate">Donar</router-link>
       </div>
       <div class="rest">
       <router-link class="hvr-grow" to="/">Home</router-link> |
@@ -27,6 +27,7 @@ html{
   /* text-align: center; */
   background-color: #ebe2dd;
   color: #6e6d68;
+  /* font-size: 20px; */
 }
 #nav {
   display: flex;
@@ -59,4 +60,32 @@ html{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+  input[type=text],
+  input[type=tel],
+  input[type=email],
+  input[type=password] {
+  border: 0;
+  box-shadow: -8px 10px 0px -7px #bb9f7a, 8px 10px 0px -7px #bb9f7a;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  }
+
+  input[type=text]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
+  }
+  input[type=tel]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
+  }
+  input[type=email]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
+  }
+  input[type=password]:focus{
+  outline: none;
+  box-shadow: -8px 10px 0px -7px rgb(78, 107, 234), 8px 10px 0px -7px rgb(78, 107, 234);
+  }
+  
 </style>

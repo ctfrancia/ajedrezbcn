@@ -36,12 +36,12 @@ export default {
 <style scoped>
   input {
     background: none;
-    border: 1px solid #fffcf7;
-    border-radius: 5px;
+    border: none;
+    /* border-radius: 5px; */
   }
   form {
-    background: #738290;
-    color: #fffcf7;
+    background: none;
+    color: ;
     margin: 0 10vw;
     padding: 10px;
     display: flex;
@@ -69,6 +69,7 @@ export default {
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
+    color: #c56161;
   }
   #email-and-password{
     display: flex;
