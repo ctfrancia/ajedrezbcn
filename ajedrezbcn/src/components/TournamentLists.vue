@@ -1,9 +1,14 @@
 <template>
   
   <div class="container"> 
+    <!-- <div v-if="isLoaded">
+    note that if you use v-show you will get the same error
+    {{ tournament.title }}
+    </div> -->
+  
     <div class="tournament-list">
       <div class="host">
-        <p class="p-static">Hosting Club:</p> <p>Congres</p>
+        <p class="p-static">Hosting Club:</p> <p>Congres {{tournament.title}}</p>
       </div>
       <div class="location">
         <p class="p-static">Location:</p> <p>123 cool st.</p>
@@ -25,11 +30,7 @@
       </div>
       <div class="summary">
         <p class="p-static">Summary:</p>
-        <p>Here will be a summary of the chess tournament that will spart the interest
-          of the people that want to come and from there people will know if they want to come.
-          I know I can fill this part with lorum ipsum but I don't care for it right now as I really want to type
-          this nonsense text.
-        </p>
+        <p>{{tournament.title}}</p>
       </div>
       <a href="" class="hvr-grow"><p>For more information click here</p></a>
     </div>
@@ -40,9 +41,10 @@
 </template>
 <script>
 export default {
-  name: 'TournamentLists'
-  //this component will be receiving props
-}
+  name: 'TournamentLists',
+  props: ['tournament'],
+  }
+
 </script>
 
 <style scoped>

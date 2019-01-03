@@ -1,6 +1,6 @@
-const dinfo = require('../config');
+const CONFIG = require('../config');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('chessdb', `${dinfo.duser}`, `${dinfo.dpass}`, {
+const sequelize = new Sequelize('chessdb', `${CONFIG.duser}`, `${CONFIG.dpass}`, {
   host: 'localhost',
   dialect: 'postgres',
 });
@@ -9,7 +9,7 @@ sequelize
   .then(() => {
     console.log('Connection has been established successfully.');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error('Unable to connect to the database:', err);
   });
 

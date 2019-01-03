@@ -6,5 +6,6 @@ const sequelize = new Sequelize('chessdb', `${dinfo.duser}`, `${dinfo.dpass}`, {
 });
 
 module.exports = fetchAllTournaments = () => {
-  return Tournament.findAll({});
+  return Tournament.findAll()
+    .then(tournaments => console.log(tournaments));
 };

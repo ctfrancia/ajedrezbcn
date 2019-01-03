@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <TournamentsMainPage
-      
-      msg="Tournaments"/>
+    <TournamentsMainPage msg="Tournaments"/>
   </div>
 </template>
 
@@ -18,10 +16,6 @@ export default {
   components:{
     TournamentsMainPage,
   },
-  created: () => {
-    console.log('hello there!');
-    
-  } 
 }
 </script>
 <style scoped>

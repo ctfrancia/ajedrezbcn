@@ -8,15 +8,23 @@
         <CreateTournamentButton/>
       </router-link>
       
-      <TournamentLists />
+    <!-- <TournamentLists tournament="tournaments" /> -->
+
+      <TournamentLists
+          v-for="tournament in listOfTournaments" 
+          v-bind:key="tournament.id"
+          v-bind:tournament="tournament"
+      />
+
     </div>
     <!-- <router-view /> -->
-    <!-- -->
   </div>
 </template>
 <script>
 import CreateTournamentButton from './CreateTournamentButton.vue';
 import TournamentLists from './TournamentLists.vue';
+import axios from 'axios';
+
 
 //  here is where the call will be made to the database to get the list of all tournaments within barecelona
 export default {
@@ -27,6 +35,19 @@ export default {
   components: {
     CreateTournamentButton,
     TournamentLists,
+  },
+
+  data: () => {
+    return {
+      listOfTournaments: []
+    }
+  },
+  mounted() {
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts')
+      .then((payload) => {
+      console.log('paylod: ', payload);
+      this.listOfTournaments = payload.data});
   }
 }
 </script>
