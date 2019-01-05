@@ -25,27 +25,16 @@
       </div>
       <div id="lang-section">
         <p>Languages Spoken in Club:</p>
-        <input class="c-box" type="checkbox" name="language" value="Spanish"><p>Castellano</p> 
-        <input class="c-box" type="checkbox" name="language" value="Catalan"><p>Catalán</p>
-        <input class="c-box" type="checkbox" name="language" value="English"><p>Inglés</p>
-        <input class="c-box" type="checkbox" name="language" value="Portuguese"><p>Português</p>
-        <input class="c-box" type="checkbox" name="language" value="French"><p>Francés</p>
-        <input class="c-box" type="checkbox" name="language" value="German"><p>Alemán</p> 
-        <input class="c-box" type="checkbox" name="language" value="Chinese"><p>Chino</p>
-        <input class="c-box" type="checkbox" name="language" value="Basque"><p>Vasco</p>
-        <input class="c-box" type="checkbox" name="language" value="Galician"><p>Gallego</p>
+        <!-- <div v-bind:key="language.id" v-for="language in Languages"> -->
+          <div v-bind:key="index"  v-for="(language, index) in languages" >
+            <input class="c-box" type="checkbox" name="language" v-bind:value="language.text"><p>{{language.text}}</p> 
+          </div>
       </div>
       <div id="extras">
         <p>Extras ammenities with the club</p>
-        <input class="c-box" type="checkbox" name="extras" value="Bar"><p>Bar</p>
-        <input class="c-box" type="checkbox" name="extras" value="Wifi"><p>Wifi</p>
-        <input class="c-box" type="checkbox" name="extras" value="Weekly"><p>Weekly Gatherings</p>
-        <input class="c-box" type="checkbox" name="extras" value="Dominoes"><p>Dominoes</p>
-        <input class="c-box" type="checkbox" name="extras" value="International"><p>International</p>
-        <input class="c-box" type="checkbox" name="extras" value="MetroClose"><p>Close to Metro</p>
-        <input class="c-box" type="checkbox" name="extras" value="Lessons"><p>Lessons</p>
-        <input class="c-box" type="checkbox" name="extras" value="Titled"><p>Titled Players</p>
-        <input class="c-box" type="checkbox" name="extras" value="BeginnerFriendly"><p>Beginner Friendly</p>
+        <div v-bind:key="index" v-for="(extra, index) in extras">
+          <input class="c-box" type="checkbox" name="extras" :value="extra.text"><p>{{extra.text}}</p>
+        </div>
       </div>
       <textarea rows="10" cols="80" id="location-description" type="text" 
       placeholder= "Please enter any additional information about your club here">
@@ -67,6 +56,33 @@ export default {
   props: {
     msg: String,
   },
+  data: function () {
+    return {
+      language: '',
+      languages: [
+        { text: "Castellano"},
+        { text: "Catalán"   },
+        { text: "Inglés"    },
+        { text: "Francés"   },
+        { text: "Alemán"    },
+        { text: "Chino"     },
+        { text: "Vasco"     },
+        { text: "Gallego"   },     
+      ],
+      extra: '',
+      extras: [
+        {text: "Bar"                        },
+        {text: "Wifi"                       },
+        {text: "Reuniones"                  },
+        {text: "Dominos"                    },
+        {text: "Internacional"              },
+        {text: "Cerca del Metro"            },
+        {text: "Clases"                     },
+        {text: "Jugadors titelado"          },
+        {text: "Amigable para Principiantes"},
+      ]
+    }
+  }
 }
 </script>
 

@@ -18,11 +18,14 @@ const Tournament = sequelize.define('tournament', {
     primaryKey: true,
     autoIncrement: true,
   },
-  clubCreated: {
-    type: Sequelize.BOOLEAN,
+  nameOfTournament: {
+    type: Sequelize.STRING,
   },
   location: {
     type: Sequelize.STRING,
+  },
+  clubCreated: {
+    type: Sequelize.BOOLEAN,
   },
   clubPhone: {
     type: Sequelize.INTEGER,

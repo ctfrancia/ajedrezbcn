@@ -7,15 +7,13 @@
       <router-link to="/createtournament">
         <CreateTournamentButton/>
       </router-link>
-      
-    <!-- <TournamentLists tournament="tournaments" /> -->
-
-      <TournamentLists
-          v-for="tournament in listOfTournaments" 
-          v-bind:key="tournament.id"
-          v-bind:tournament="tournament"
-      />
-
+      <div class="listContainer">  
+        <TournamentLists
+            v-for="tournament in listOfTournaments" 
+            v-bind:key="tournament.id"
+            v-bind:tournament="tournament"
+        />
+      </div>
     </div>
     <!-- <router-view /> -->
   </div>
@@ -36,7 +34,11 @@ export default {
     CreateTournamentButton,
     TournamentLists,
   },
-
+  // computed: {
+  //   tournaments(){
+  //     return this.$store.state.tournaments;
+  //     }
+  //   },
   data: () => {
     return {
       listOfTournaments: []
@@ -46,8 +48,8 @@ export default {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((payload) => {
-      console.log('paylod: ', payload);
-      this.listOfTournaments = payload.data});
+        console.log('paylod: ', payload);
+        this.listOfTournaments = payload.data});
   }
 }
 </script>
@@ -61,7 +63,12 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-  .container {
-    
+  .listContainer{
+    display: flex;
+    /* flex-direction: row; */
+    width: 90vw;
+    align-items: center;
+    flex-wrap: wrap;
   }
+
 </style>

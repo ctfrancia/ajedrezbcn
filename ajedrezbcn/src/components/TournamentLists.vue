@@ -20,6 +20,10 @@
         <p class="p-static">Date(s):</p>
         <div class="date-list">
           <!-- need a for loop over the dates to be shown -->
+          <datetime v-model="date" input-id="startDate">
+  <label for="startDate" slot="before">Field Label</label>
+  <span class="description" slot="after">The field description</span>
+</datetime>
           <p>23-Dec-18: @13 </p>
           <p>24-Dec-18: @13 </p>
           <p>25-Dec-18: @13 </p>
@@ -30,7 +34,9 @@
       </div>
       <div class="summary">
         <p class="p-static">Summary:</p>
-        <p>{{tournament.title}}</p>
+        <section id="summary-holder">
+          {{tournament.body}}
+        </section>
       </div>
       <a href="" class="hvr-grow"><p>For more information click here</p></a>
     </div>
@@ -40,10 +46,17 @@
 
 </template>
 <script>
+
+
+
+// Vue.component('datetime', Datetime);
 export default {
   name: 'TournamentLists',
   props: ['tournament'],
-  }
+  // components: {
+  //   datetime: Datetime,
+  // },
+}
 
 </script>
 
@@ -54,6 +67,11 @@ export default {
     justify-content: space-around;
     flex-basis: 30%;
   }
+  #summary-holder{
+    height: 75px;
+    overflow:scroll;
+    /* overflow-x: scroll; */
+  }
   a{
     margin: 5px;
     text-align: center;
@@ -63,7 +81,8 @@ export default {
   .tournament-list{
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 25vw;
+    height: 500px;
     border: 1px solid black;
     border-radius: 10px;
     margin: 5px;
@@ -86,6 +105,7 @@ export default {
   .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+    color: #c56161;
   }
 
   .host,
@@ -109,6 +129,7 @@ export default {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     margin-right: 5px;
+    color: #c56161;
   }
 
 </style>
