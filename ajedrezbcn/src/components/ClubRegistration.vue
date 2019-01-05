@@ -24,16 +24,29 @@
         </div>
       </div>
       <div id="lang-section">
-        <p>Languages Spoken in Club:</p>
-        <!-- <div v-bind:key="language.id" v-for="language in Languages"> -->
-          <div v-bind:key="index"  v-for="(language, index) in languages" >
-            <input class="c-box" type="checkbox" name="language" v-bind:value="language.text"><p>{{language.text}}</p> 
+        <p>Idiomas Hablados en el Club:</p>
+        <!-- :key is short for v-bind:key is short for v-for -->
+          <div class="l-container" :key="index"  v-for="(language, index) in languages" >
+            <input
+            v-model="checkedLanguages" 
+            class="c-box" 
+            type="checkbox" 
+            name="language" 
+            :value="language.text">
+            <p>{{language.text}}</p>
           </div>
       </div>
       <div id="extras">
-        <p>Extras ammenities with the club</p>
-        <div v-bind:key="index" v-for="(extra, index) in extras">
-          <input class="c-box" type="checkbox" name="extras" :value="extra.text"><p>{{extra.text}}</p>
+        <p>Amenidades Extra con el Club:</p>
+        <!-- :key is short for v-bind:key  is short for v-for -->
+        <div class="e-container" :key="index" v-for="(extra, index) in extras">
+          <input 
+          v-model="checkedExtras" 
+          class="c-box" 
+          type="checkbox" 
+          name="extras" 
+          :value="extra.text">
+          <p>{{extra.text}}</p>
         </div>
       </div>
       <textarea rows="10" cols="80" id="location-description" type="text" 
@@ -58,30 +71,26 @@ export default {
   },
   data: function () {
     return {
-      language: '',
-      languages: [
-        { text: "Castellano"},
-        { text: "Catalán"   },
-        { text: "Inglés"    },
-        { text: "Francés"   },
-        { text: "Alemán"    },
-        { text: "Chino"     },
-        { text: "Vasco"     },
-        { text: "Gallego"   },     
-      ],
-      extra: '',
-      extras: [
-        {text: "Bar"                        },
-        {text: "Wifi"                       },
-        {text: "Reuniones"                  },
-        {text: "Dominos"                    },
-        {text: "Internacional"              },
-        {text: "Cerca del Metro"            },
-        {text: "Clases"                     },
-        {text: "Jugadors titelado"          },
-        {text: "Amigable para Principiantes"},
-      ]
+      checkedLanguages: [],
+      checkedExtras: [],
     }
+  },
+  // computed here is what is accessing the Vuex store
+  computed: {
+    languages(){
+      return this.$store.state.languages;
+    },
+    extras(){
+      return this.$store.state.extras;
+    },
+    //setters are needed for the ones below
+    // checkedLanguages(){
+    //   return this.$store.state.checkedLanguages;
+    // },
+    // checkedExtras(){
+    //   return this.$store.state.checkedExtras;
+    // }
+
   }
 }
 </script>
@@ -92,6 +101,9 @@ export default {
     flex-direction: column;
     align-items: center;
     height: 90vh;
+  }
+  p{
+    margin: 0px 10px; 
   }
   form{
     margin: 0 10vw;
@@ -191,6 +203,9 @@ export default {
   animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+}
+.l-container, .e-container{
+  display: flex;
 }
 
 </style>

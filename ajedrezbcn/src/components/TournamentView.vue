@@ -34,23 +34,33 @@ export default {
     CreateTournamentButton,
     TournamentLists,
   },
-  // computed: {
-  //   tournaments(){
-  //     return this.$store.state.tournaments;
-  //     }
-  //   },
-  data: () => {
-    return {
-      listOfTournaments: []
-    }
-  },
-  mounted() {
-    axios
-      .get('https://jsonplaceholder.typicode.com/posts')
-      .then((payload) => {
-        console.log('paylod: ', payload);
-        this.listOfTournaments = payload.data});
+  computed: {
+    tournaments(){
+      return this.$store.state.tournaments;
+      }
+    },
+  // data: () => {
+  //   return {
+  //     listOfTournaments: []
+  //   }
+  // },
+  created() {
+    this.$store
+    .dispatch('fetchTournaments')
+    .then( data => {
+      this.tournaments = data;
+    })
+    .catch(err => console.log(err));
   }
+  // mounted() {
+  //   axios
+  //     .get('https://jsonplaceholder.typicode.com/posts')
+  //     .then((payload) => {
+  //       // console.log('paylod: ', payload);
+  //       //this.listOfTournaments 
+  //       // const tournamentList = 
+  //       this.listOfTournaments = payload.data});
+  // }
 }
 </script>
 
